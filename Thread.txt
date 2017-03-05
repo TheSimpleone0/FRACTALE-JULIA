@@ -1,0 +1,78 @@
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 52
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 65
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 313
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 126
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 154
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 65
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 72
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 62
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 60
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 68
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 216
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 82
+
+#Fichier test: sauvegarde des résultats.
+#Date 2017-03-15 .
+#premier colonne nombre de thread  
+ #Deuxième colonne est temps d'execution en ms
+3 70

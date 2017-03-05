@@ -1,0 +1,8 @@
+#premier colonne nombre de thread
+#deuxième colonne temps d'execution de la fonction selon le nmbr de thre  
+3 65
+5 72
+7 90
+8 89
+12 90
+15 100
