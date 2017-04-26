@@ -117,7 +117,17 @@ struct timeval temps_avant, temps_apres;
   gettimeofday (&temps_avant, NULL);
 
 mtx.lock();
-/**/
+  for (int i = 0 ; i < THREAD ; i++) {
+    julia_id[i] = i;
+    pthread_create(&Tab[i], NULL, Calculjulia, (void*) &julia_id[i]); 
+  }
+mtx.unlock();
+gettimeofday (&temps_apres, NULL); 
+double TmpEx=((temps_apres.tv_sec - temps_avant.tv_sec) * 1000000 + temps_apres.tv_usec)-temps_avant.tv_usec;
+
+cout<<" avec un nombre de thread    "<< THREAD<<"  :temps en us: "<< TmpEx <<".\n"; 
+ string const nomFichier("THREAD.dat"); 
+ofstream monFlux("THREAD.dat", ios::app);
     if(monFlux)    
     {
               time_t temps;
@@ -142,62 +152,8 @@ mtx.lock();
         cout<< "Vous pouvez changer votre fractale comme suite:\n"<<"\n"<< "Touche: 'x' et 'c' pour augmenter et reduire la partie réelle de votre fractale \n"<<"Touche: 'z' et 'a' pour le zoom \n"<<"Touche: 's' et 'd' pour réduire et augmenter la partie imaginaire\n"<< endl;
          cout<<"------------------------------Temps d'execution--------------------------------- \n"<<" avec un nombre de thread    "<< THREAD<<"  :temps en us: "<< TmpEx <<".\n"; 
 
-
-
-while(char key = cvWaitKey(2)) {
-    
-   switch(key){
-      case 'x':
-      for (int i = 0 ; i < THREAD ; i++) {
-      pthread_cancel(Tab[i]);
-  
-    }
- re = re + 0.01;
-      goto Init; 
-      break;
-      case 'c':
-        for (int i = 0 ; i < THREAD ; i++) {
-      pthread_cancel(Tab[i]);
-      }
-  re = re - 0.01;
-      goto Init;
-      break;
-    case 'd':
-      for (int i = 0 ; i < THREAD ; i++) {
-      pthread_cancel(Tab[i]);
-      }
-  im = im + 0.01;
-      goto Init;
-      break;
-      case 's':
-      for (int i = 0 ; i < THREAD ; i++) {
-      pthread_cancel(Tab[i]);
-      }
-  im = im - 0.01;
-      goto Init;
-      break;
-
-      
-      case 'z':
-      for (int i = 0 ; i < THREAD ; i++) {
-      pthread_cancel(Tab[i]);
-      }
-  X += 0.01;
-      Y -= 0.01;
-      goto Init;
-      break;
-      case 'a': 
-      for (int i = 0 ; i < THREAD ; i++) {
-      pthread_cancel(Tab[i]);
-      }
-  X -= 0.01;
-  Y += 0.01;
-      goto Init;
-      break;
-
-      default:
-      break;
-    }
+/*********/
+/************/
  if (key == 'q')// si 'q' alors break fermer l'image
     break;
     imshow("image", newImg);// affichage de l'image
