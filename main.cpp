@@ -70,6 +70,14 @@ void* Calculjulia(void* arg)
 
 
 
+while (x*x + y*y < 4 && z < iteration)
+        {
+          tmp = (x * x - y * y) + re;
+          y = (x * y + x * y) + im;
+          x = tmp;
+          z++;
+        }
+
  H = (z*360)/iteration;
         HSV data = HSV(H,S,V);
  RGB value = HSVToRGB(data);
@@ -109,17 +117,7 @@ struct timeval temps_avant, temps_apres;
   gettimeofday (&temps_avant, NULL);
 
 mtx.lock();
-  for (int i = 0 ; i < THREAD ; i++) {
-    julia_id[i] = i;
-    pthread_create(&Tab[i], NULL, Calculjulia, (void*) &julia_id[i]); 
-  }
-mtx.unlock();
-gettimeofday (&temps_apres, NULL); 
-double TmpEx=((temps_apres.tv_sec - temps_avant.tv_sec) * 1000000 + temps_apres.tv_usec)-temps_avant.tv_usec;
-
-cout<<" avec un nombre de thread    "<< THREAD<<"  :temps en us: "<< TmpEx <<".\n"; 
- string const nomFichier("THREAD.dat"); 
-ofstream monFlux("THREAD.dat", ios::app);
+/**/
     if(monFlux)    
     {
               time_t temps;
