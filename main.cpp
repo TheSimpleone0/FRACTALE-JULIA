@@ -63,13 +63,12 @@ void* Calculjulia(void* arg)
 
   for (int i = 0 ; i < HEIGHT ; i++){
 
-        while (x*x + y*y < 4 && z < iteration)
-        {
-          tmp = (x * x - y * y) + re;
-          y = (x * y + x * y) + im;
-          x = tmp;
-          z++;
-        }
+      for (int j = 0 ; j < WIDTH ; j++){
+        x = convertx(i);
+        y = converty(j);
+        z = 0;
+
+
 
  H = (z*360)/iteration;
         HSV data = HSV(H,S,V);
