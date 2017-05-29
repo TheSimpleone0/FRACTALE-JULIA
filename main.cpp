@@ -63,11 +63,6 @@ void* Calculjulia(void* arg)
 
   for (int i = 0 ; i < HEIGHT ; i++){
 
-      for (int j = 0 ; j < WIDTH ; j++){
-        x = convertx(i);
-        y = converty(j);
-        z = 0;
-
         while (x*x + y*y < 4 && z < iteration)
         {
           tmp = (x * x - y * y) + re;
